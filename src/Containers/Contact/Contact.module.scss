@@ -1,0 +1,119 @@
+@import '../../global.module.scss';
+
+.ContactContainer {
+    padding-bottom: 272px;
+
+    .Banner {
+        &:before {
+            background-color: #040606;
+            padding-bottom: 200px;
+            height: 100%;
+        }
+
+        .Content {
+            max-width: unset;
+            padding-right: 135px;
+            position: relative;
+        }
+
+
+        .Headline {
+            display: flex;
+            flex-direction: column;
+
+            span {
+                font-size: 40px;
+                font-weight: bold;
+                line-height: 1.5;
+
+                &:last-child {
+                    font-weight: 200;
+                }
+            }
+        }
+
+        .ContactMain {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+
+            >div {
+                width: 50%;
+            }
+        }
+
+
+        .FormContainer {
+            padding-top: 72px;
+            padding-bottom: 90px;
+            display: flex;
+            flex-direction: column;
+
+            >div {
+                margin-bottom: 16px;
+            }
+
+            .EmailPhone {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+
+        .InfoContainer {
+            padding-left: 224px;
+            margin-top: -111px;
+            font-weight: 200;
+
+            .Headline {
+                max-width: 374px;
+                font-size: 26px;
+                line-height: 1.46;
+                padding-bottom: 78px;
+            }
+
+            .Location,
+            .Info {
+                max-width: 218px;
+                font-size: 18px;
+                line-height: 1.56;
+            }
+
+            .Location {
+                padding-bottom: 24px;
+
+                :first-child {
+                    font-weight: bold;
+                }
+
+            }
+
+            .Info {
+                padding-bottom: 36px;
+
+                .ContactName {
+                    font-weight: bold;
+                }
+
+                >div {
+                    &:not(:last-of-type) {
+                        padding-bottom: 24px;
+                    }
+
+                    &:first-of-type {
+                        padding-top: 24px;
+                    }
+                }
+            }
+
+            .Social {
+                a{
+                    &:first-of-type{
+                        margin-right: 37px;
+                    }
+                }
+            }
+        }
+    }
+}

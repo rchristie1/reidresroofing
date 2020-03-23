@@ -1,0 +1,41 @@
+.HeaderContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 36px 135px;
+    position: relative;
+    z-index: 1;
+}
+
+.HeaderButton {
+    a {
+        text-decoration: none;
+    }
+}
+
+.NavLinks {
+    ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+
+        li {
+            a {
+                text-decoration: none;
+                color: #fff;
+                font-size: 15px;
+                line-height: 24px;
+                text-transform: capitalize;
+
+                &:hover {
+                    border-bottom: 1px solid #fff;
+                }
+            }
+        }
+
+        li:not(:last-of-type) {
+            margin-right: 40px;
+        }
+    }
+}

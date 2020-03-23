@@ -1,0 +1,39 @@
+.Banner {
+    min-height: 740px;
+    margin-top: -135px;
+
+    .Content {
+        color: #fff;
+        position: absolute;
+        top: 270px;
+        padding-left: 135px;
+        max-width: 668px;
+
+        .Headline {
+            font-size: 40px;
+            line-height: 1.5;
+            font-weight: 300;
+        }
+
+        .SubHeadline {
+            font-size: 14px;
+            line-height: 1.71;
+            font-weight: 600;
+            padding-top: 48px;
+        }
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+
+        background-size: cover;
+        min-height: 740px;
+    }
+}
