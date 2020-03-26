@@ -1,4 +1,43 @@
-// .Container {
-//     display: flex;
-//     flex-direction: column;
-// }
+:global(.slick-arrow) {
+    z-index: 9999;
+    width: 35px !important;
+    height: 35px !important;
+    color: #46525e;
+    background-color: #fff;
+    padding: 10px;
+    &:hover{
+        background-color: #fff;
+        color: #46525e;
+    }
+}
+
+:global(.slick-prev) {
+    left: 30px;
+    padding-left: 16px;
+    padding-right: 4px;
+}
+
+:global(.slick-next) {
+    right: 30px;
+}
+
+:global(.slick-slider) {
+    top: calc(50% - 324px);
+    outline: none;
+}
+
+:global(.slick-list) {
+    margin: 0 auto;
+
+}
+
+:global(.slick-slide > div) {
+    margin: 0 auto;
+    height: 648px;
+    width: 972px;
+
+    img {
+        object-fit: contain;
+        height: 100%;
+    }
+}

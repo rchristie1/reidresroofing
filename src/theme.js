@@ -44,6 +44,11 @@ const theme = createMuiTheme({
         
       }
     },
+    MuiBackdrop:{
+      root:{
+        backgroundColor: "rgba(0,0,0, 0.9)"
+      }
+    },
     MuiOutlinedInput: {
       root: {
         borderRadius: 0,

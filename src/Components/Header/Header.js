@@ -18,20 +18,29 @@ const useStyles = makeStyles({
 
 export default function Header() {
   let history = useHistory();
-
-  console.log(history.location.pathname);
   const classes = useStyles();
 
   let btnClasses;
+  let NavLinkClass;
 
-  if (history.location.pathname === "/about") {
+  const path = history.location.pathname
+
+  if (path === "/about") {
     btnClasses = { root: classes.root, label: classes.label };
   }
+
+  if(path === "/services" || path === "/our-work") {
+    NavLinkClass = [styles.NavLinks, styles.NavLinksBlack].join(' ')
+  } else {
+    NavLinkClass = styles.NavLinks
+  }
+
+
 
   return (
     <div className={styles.HeaderContainer}>
       <div className={styles.HeaderLogo}>LOGO HERE1</div>
-      <div className={styles.NavLinks}>
+      <div className={NavLinkClass}>
         <ul>
           <li>
             <a href="/">home</a>
@@ -40,13 +49,13 @@ export default function Header() {
             <a href="/about">about</a>
           </li>
           <li>
-            <a href="www.google.ca">work</a>
+            <a href="/our-work">work</a>
           </li>
           <li>
-            <a href="www.google.ca">products</a>
+            <a href="/products">products</a>
           </li>
           <li>
-            <a href="www.google.ca">services</a>
+            <a href="/services">services</a>
           </li>
         </ul>
       </div>
