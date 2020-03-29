@@ -1,37 +1,42 @@
 .FooterContainer {
     color: #fff;
     background-color: #161616;
-    padding: 150px 135px 29px;
+    padding: 72px 24px 36px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .ContainerTop {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
-.Location, .Info {
+.Location,
+.Info {
     display: flex;
     flex-direction: column;
 }
 
 .Location {
-    margin-right: 216px;
+    padding-bottom: 48px;
+    // margin-right: 216px;
+
     .Logo {
-        width: 89px;
-        height: 89px;
-        margin-bottom: 24px;
+        width: 48px;
+        height: 48px;
+        margin-bottom: 28px;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: 30px;
+        background-position: center;
         border-radius: 10px;
         background-color: #00b200;
         background-image: url(../../Assets/Icons/hammer-solid.svg);
     }
+
     .Info {
         line-height: 1.6;
         font-size: 15px;
+
         :first-child {
             font-weight: bold;
         }
@@ -40,7 +45,7 @@
 
 .Grid {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .GutterBottom {
@@ -53,7 +58,8 @@
         line-height: 2;
         font-weight: 300;
         color: inherit;
-        &:hover{
+
+        &:hover {
             opacity: 0.8;
         }
     }
@@ -63,8 +69,9 @@
         line-height: 1.5;
     }
 
-    &.Social{
+    &.Social {
         flex-direction: row;
+
         a:first-of-type {
             margin-right: 25px;
         }
@@ -72,7 +79,12 @@
 }
 
 .List {
-    &:not(:last-of-type){
+    h3 {
+        font-weight: 200;
+        font-size: 20px;
+        line-height: 1.5;
+    }
+    &:not(:last-of-type) {
         margin-right: 80px;
     }
 }
@@ -82,13 +94,58 @@
     height: 1px;
     background-color: #fff;
     opacity: 0.5;
-    margin-top: 182px;
-    margin-bottom: 29px;
+    margin-bottom: 36px;
+    margin-top: 48px;
 }
 
-.Copyright{
+.Copyright {
+    text-align: center;
     line-height: 1.6;
     color: #fff;
     opacity: 0.5;
     font-size: 15px;
+}
+
+@media (min-width: 768px){
+    .FooterContainer {
+        padding: 150px 48px 29px;
+    }
+
+    .ContainerTop {
+        flex-direction: row;
+    }
+
+    .Location {
+        padding-bottom: initial;
+
+        .Logo {
+            width: 89px;
+            height: 89px;
+            margin-bottom: 24px;
+            background-size: 52px;
+        }
+
+        .Info {
+            padding-right: 8px;
+        }
+    }
+
+    .Grid {
+        flex-direction: row;
+        margin-left: auto;
+    }
+
+    .Divider {
+    margin-top: 182px;
+        margin-bottom: 29px;
+    }
+
+    .Copyright {
+        text-align: left;
+    }
+}
+@media (min-width: 1366px){
+    .FooterContainer {
+        padding: 150px 135px 29px;
+    }
 }

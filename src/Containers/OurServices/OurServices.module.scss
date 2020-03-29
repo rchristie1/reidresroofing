@@ -1,13 +1,13 @@
 .ServiceBanner {
-    min-height: 580px;
-    font-size: 40px;
+    min-height: 400px;
+    font-size: 24px;
     font-weight: 200;
     line-height: 1.5;
     color: #46525e;
     display: flex;
     align-items: center;
-    padding-left: 135px;
-    padding-right: 135px;
+    padding-left: 24px;
+    padding-right: 24px;
     background-color: #f9f9f9;
 
     .Headline {
@@ -16,8 +16,8 @@
 }
 
 .ServiceContent {
-    padding-left: 135px;
-    padding-right: 135px;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
 .ServiceHeader {
@@ -33,7 +33,7 @@
 
 .ServiceContainerItem {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     >div {
@@ -61,5 +61,39 @@
         line-height: 1.6;
         color: #46525e;
         padding-bottom: 24px;
+    }
+}
+
+@media (min-width: 768px) {
+    .ServiceBanner {
+        min-height: 580px;
+        font-size: 40px;
+        padding-left: 135px;
+        padding-right: 135px;
+    }
+
+    .ServiceContent {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+
+    .ServiceContainerItem {
+        justify-content: space-between;
+    }
+}
+@media (min-width: 1280px) {
+    .ServiceContent {
+        padding-left: 135px;
+        padding-right: 135px;
+    }
+}
+
+@media (min-width: 1423px) {
+    .ServiceContainerItem {
+        justify-content: flex-start;
+        > div:nth-of-type(3n+2) {
+            margin-left: 56px;
+            margin-right: 56px;
+        }
     }
 }

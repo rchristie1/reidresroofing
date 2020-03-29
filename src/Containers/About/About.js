@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./About.module.scss";
 import { heading } from "../../Components/UI/CommonElements";
 import Button from "@material-ui/core/Button";
+import { Link } from "react-router-dom";
 
 const About = () => {
   const cards = [
@@ -54,7 +55,7 @@ const About = () => {
       <div className={styles.Banner}>
         <div className={styles.Content}>
           <div className={styles.Headline}>
-            About Reid’s Residential Roofing
+          Reid’s Residential Roofing is a team of highly trained professionals for all your roofing needs.
           </div>
           <div className={styles.SubHeadline}>
             A family owned and operated business. We are a team you can trust.
@@ -84,12 +85,12 @@ const About = () => {
             </div>
           </div>
           <div className={styles.AboutContentRight}>
-            <div className={styles.AboutImage}>imagehere</div>
+            <div className={styles.AboutImage}><div /></div>
           </div>
         </div>
 
         <div className={styles.AboutProcess}>
-          <div className={styles.AboutProcessLeft}>Image Here</div>
+          <div className={styles.AboutProcessLeft} />
           <div className={styles.AboutProcessRight}>
             {heading("Our Process")}
             <div className={styles.AboutProcessHeading}>
@@ -120,7 +121,7 @@ const About = () => {
           <div>We Got You Covered.</div>
           <div>Let’s Work Together On Your Next Project</div>
           <div>Contact us for a free consultation and estimate regarding your roofing project.</div>
-          <span><Button>Contact us</Button></span>
+          <span><Link to='/contact'><Button>Contact us</Button></Link></span>
         </div>
       </div>
     </div>

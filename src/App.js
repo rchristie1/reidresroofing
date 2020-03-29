@@ -9,7 +9,7 @@ import About from "./Containers/About/About";
 import Contact from "./Containers/Contact/Contact";
 import Portfolio from "./Containers/Portfolio/Portfolio";
 import OurServices from "./Containers/OurServices/OurServices"
-
+import Products from "./Containers/Products/Products"
 
 import styles from "./App.module.scss";
 
@@ -23,6 +23,7 @@ function App() {
         <Route path="/contact" exact component={Contact} />
         <Route path="/services" exact component={OurServices} />
         <Route path="/our-work" exact component={Portfolio} />
+        <Route path="/products" exact component={Products} />
       </Switch>
       <Footer className={styles.Footer} />
     </div>

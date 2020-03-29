@@ -6,23 +6,21 @@
     .Banner {
         &:before {
             background-color: #040606;
-            padding-bottom: 200px;
+            padding-bottom: 900px;
             height: 100%;
         }
 
         .Content {
             max-width: unset;
-            padding-right: 135px;
             position: relative;
         }
-
 
         .Headline {
             display: flex;
             flex-direction: column;
 
             span {
-                font-size: 40px;
+                font-size: 24px;
                 font-weight: bold;
                 line-height: 1.5;
 
@@ -34,15 +32,10 @@
 
         .ContactMain {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: space-between;
             width: 100%;
-
-            >div {
-                width: 50%;
-            }
         }
-
 
         .FormContainer {
             padding-top: 72px;
@@ -56,21 +49,23 @@
 
             .EmailPhone {
                 display: flex;
-                flex-direction: row;
-                justify-content: space-between;
+                flex-direction: column;
+                 > div {
+                     max-width: 100%;
+                 }
+                .Email {
+                    margin-bottom: 16px;
+                }
             }
         }
 
         .InfoContainer {
-            padding-left: 224px;
-            margin-top: -111px;
             font-weight: 200;
 
             .Headline {
-                max-width: 374px;
-                font-size: 26px;
-                line-height: 1.46;
-                padding-bottom: 78px;
+                font-size: 18px;
+                line-height: 1.5;
+                padding-bottom: 36px;
             }
 
             .Location,
@@ -111,6 +106,94 @@
                 a{
                     &:first-of-type{
                         margin-right: 37px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .ContactContainer {
+        padding-bottom: 272px;
+    
+        .Banner {
+            &:before {
+                background-color: #040606;
+                padding-bottom: 200px;
+                height: 100%;
+            }
+    
+            .Content {
+                padding-right: 35px;
+                padding-left: 35px;
+            }
+    
+            .Headline {
+                flex-direction: column;
+    
+                span {
+                    font-size: 30px;
+                }
+            }
+    
+            .ContactMain {
+                flex-direction: row;
+    
+                >div {
+                    width: 50%;
+                }
+            }
+    
+            .InfoContainer {
+                padding-left: 50px;
+                margin-top: -90px;
+    
+                .Headline {
+                    max-width: 374px;
+                    font-size: 26px;
+                    line-height: 1.46;
+                    padding-bottom: 78px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1280px) {
+    .ContactContainer {
+        .Banner {
+            .Headline {
+                span {
+                    font-size: 40px;
+                }
+            }
+
+            .Content {
+                padding-right: 135px;
+                padding-left: 135px;
+            }
+
+            .InfoContainer {
+                padding-left: 224px;
+                margin-top: -111px;
+            }
+        }
+    }
+}
+@media (min-width: 1366px) {
+    .ContactContainer {
+        .Banner {
+            .FormContainer {
+                .EmailPhone {
+                    flex-direction: row;
+                    justify-content: space-between;
+
+                    > div {
+                        max-width: 48%;
+                    }
+                    .Email {
+                        margin-bottom: initial;
                     }
                 }
             }

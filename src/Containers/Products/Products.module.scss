@@ -1,0 +1,262 @@
+.ProductBanner {
+    min-height: 375px;
+    font-size: 24px;
+    font-weight: 200;
+    line-height: 1.5;
+    color: #46525e;
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+    padding-right: 24px;
+    background-color: #f9f9f9;
+}
+
+.Experience {
+    display: flex;
+    flex-direction: column !important;
+
+    .ExperienceContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 72px 24px 48px;
+
+        .ExperienceTitle {
+            font-size: 24px;
+            font-weight: 200;
+            line-height: 1.5;
+            color: #040606;
+            padding-bottom: 24px;
+        }
+
+        .ExperienceBody {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #46525e;
+        }
+
+        &:nth-of-type(2) {
+            background-color: #f9f9f9;
+        }
+    }
+
+    .ExperienceLogos {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        >div {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+
+        .CompanyImageContainer {
+            width: 175px;
+            height: 175px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                object-fit: contain;
+            }
+        }
+
+    }
+
+    .ExperienceImage {
+        min-height: 375px;
+        width: 100%;
+        background-image: url('../../Assets/Stock/tools.jpeg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+}
+
+.Manufacturers {
+    padding: 72px 24px;
+
+    .ManufacturersTitle {
+        font-size: 24px;
+        font-weight: 200;
+        line-height: 1.5;
+        color: #040606;
+        padding-bottom: 24px;
+    }
+
+    .ManufacturerList {
+        display: flex;
+        flex-flow: column wrap;
+        max-height: 100%;
+        align-content: flex-start;
+
+
+        .DetailItem {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #212b35;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .ProductBanner {
+        min-height: 580px;
+        font-size: 40px;
+        padding-left: 135px;
+        padding-right: 135px;
+
+        .Headline {
+            max-width: 668px;
+        }
+    }
+
+    .Experience {
+        display: flex;
+        flex-direction: row !important;
+        min-height: 720px;
+        padding: initial;
+
+        >div {
+            width: 50%;
+        }
+
+        .ExperienceContent {
+            display: flex;
+            align-items: flex-start;
+            padding: initial;
+            padding-left: 25px;
+            padding-right: 25px;
+
+            .ExperienceTitle,
+            .ExperienceBody {
+                max-width: 420px;
+            }
+
+            .ExperienceTitle {
+                font-size: 40px;
+            }
+
+            .ExperienceBody {
+                font-size: 15px;
+                line-height: 1.6;
+                color: #46525e;
+            }
+
+            &:nth-of-type(2) {
+                background-color: #f9f9f9;
+            }
+        }
+
+        .ExperienceLogos {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            >div {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                flex-direction: row;
+            }
+
+            .CompanyImageContainer {
+                width: 175px;
+                height: 175px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    object-fit: contain;
+                }
+            }
+
+        }
+
+        .ExperienceImage {
+            width: 50%;
+            background-image: url('../../Assets/Stock/tools.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+    }
+
+    .Manufacturers {
+        padding: 120px 25px 250px;
+        height: 620px;
+
+        .ManufacturersTitle {
+            font-size: 40px;
+            padding-bottom: 60px;
+        }
+
+        .ManufacturerList {
+
+            >div {
+                width: 360px;
+            }
+
+            .DetailItem {
+                font-size: 26px;
+                line-height: 1.46;
+            }
+        }
+    }
+}
+
+@media (min-width: 1280px) {
+    .Experience {
+        .ExperienceContent {
+
+            >div:nth-of-type(1) {
+                width: 474px;
+            }
+
+            .ExperienceTitle,
+            .ExperienceBody {
+                max-width: 474px;
+            }
+        }
+    }
+
+    .Manufacturers {
+        .ManufacturerList {
+            >div {
+                width: 374px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1366px) {
+    .Experience {
+        .ExperienceContent {
+            padding-left: 123px;
+            padding-right: 123px;
+            align-items: center;
+        }
+    }
+
+    .Manufacturers {
+        padding: 120px 135px 250px;
+        height: 460px;
+
+        .ManufacturerList {
+
+            >div {
+                &:nth-of-type(2n+2) {
+                    padding-top: 48px;
+                }
+            }
+        }
+    }
+}

@@ -1,11 +1,32 @@
 .HeaderContainer {
-    display: flex;
+    display: none;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 36px 135px;
+    padding: 36px 24px;
     position: relative;
     z-index: 1;
+}
+
+.Logo {
+    width: 48px;
+    height: 48px;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    background-color: #00b200;
+    background-image: url(../../Assets/Icons/hammer-solid.svg);
+    background-size: 35px;
+    background-position: center;
+}
+
+.LogoSm {
+    // margin-top: 24px;
+    margin-left: 16px;
+    width: 40px;
+    height: 40px;
+    background-size: 30px;
+    bottom: 10px;
+    position: absolute;
 }
 
 .HeaderButton {
@@ -30,6 +51,7 @@
 
                 &:hover {
                     border-bottom: 1px solid #fff;
+                    transition: all 00ms;
                 }
             }
         }
@@ -40,12 +62,36 @@
     }
 }
 
+.LinkActive1 {
+    border-bottom: 1px solid #fff;
+}
+.LinkActive2 {
+    border-bottom: 1px solid #00b200;
+    color: #00b200 !important;
+}
+
 .NavLinksBlack {
     ul {
         li {
             a {
                 color: #040606;
+                &:hover {
+                    border-bottom: 1px solid #040606;
+                }
             }
         }
+    }
+}
+
+
+@media (min-width: 768px) {
+    .HeaderContainer {
+        display: flex;
+    }
+}
+
+@media (min-width: 1024px) {
+    .HeaderContainer {
+        padding: 36px 135px;
     }
 }

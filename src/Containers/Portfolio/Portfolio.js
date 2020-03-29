@@ -7,8 +7,8 @@ import Fade from "@material-ui/core/Fade";
 import Backdrop from "@material-ui/core/Backdrop";
 import CloseIcon from "@material-ui/icons/Close";
 import { makeStyles } from "@material-ui/core";
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
-import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 
 export const useStyles = makeStyles({
   root: {
@@ -45,12 +45,11 @@ const Portfolio = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     initialSlide: initialSlide,
-    nextArrow: <ArrowForwardIosIcon classes={{root: arrowStyles.root}}/>,
-    prevArrow: <ArrowBackIosIcon classes={{root: arrowStyles.root}}/>,
+    nextArrow: <ChevronRightIcon classes={{root: arrowStyles.root}}/>,
+    prevArrow: <ChevronLeftIcon classes={{root: arrowStyles.root}}/>,
   };
 
   const openModal = (i) => {
-    console.log(i);
     setInitialSlide(i)
     setModalOpen(true)
   }

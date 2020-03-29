@@ -6,6 +6,8 @@ import styles from "./Footer.module.scss";
 // import x from '../../Assets/Icons/hammer-solid.svg'
 
 export default function Footer() {
+  const date = new Date()
+
   return (
     <div className={styles.FooterContainer}>
       <div className={styles.ContainerTop}>
@@ -21,25 +23,25 @@ export default function Footer() {
           <div className={styles.List}>
             <h3>About</h3>
             <div className={styles.GutterBottom}>
-              <a href="/">Who We Are</a>
+              <a href="/about">Who We Are</a>
               <a href="/">Blog</a>
-              <a href="/">Careers</a>
+              <a href="/contact">Careers</a>
             </div>
           </div>
           <div className={styles.List}>
             <h3>Work</h3>
             <div className={styles.GutterBottom}>
-              <a href="/">Our Process</a>
-              <a href="/">Client Portfolio</a>
-              <a href="/">Products We Use</a>
+              <a href="/about">Our Process</a>
+              <a href="/portfolio">Client Portfolio</a>
+              <a href="/products">Products We Use</a>
               <a href="/">Testimonial</a>
             </div>
           </div>
           <div className={styles.List}>
             <h3>Contact</h3>
             <div className={styles.GutterBottom}>
-              <a href="/"><span>Jeff Reid</span><br /><span>(298) 980–7663</span></a>
-              <a href="/"><span>Tim Reid</span><br /><span>(298) 355–9000</span></a>
+              <a href="tel:+12899807663"><span>Jeff Reid</span><br /><span>(298) 980–7663</span></a>
+              <a href="tel:+12899807663"><span>Tim Reid</span><br /><span>(298) 355–9000</span></a>
             </div>
           </div>
           <div className={styles.List}>
@@ -57,7 +59,7 @@ export default function Footer() {
       </div>
       <div className={styles.Divider} />
       <div className={styles.Copyright}>
-        © 2020 Reid’s Residential Roofing. All Rights Reserved
+        © {date.getFullYear()} Reid’s Residential Roofing. All Rights Reserved
       </div>
     </div>
   );

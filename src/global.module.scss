@@ -1,16 +1,16 @@
 .Banner {
-    min-height: 740px;
-    margin-top: -135px;
-
+    min-height: 477px;
     .Content {
         color: #fff;
         position: absolute;
-        top: 270px;
-        padding-left: 135px;
+        top: 160px;
+        padding-left: 24px;
+        padding-right: 24px;
+        
         max-width: 668px;
 
         .Headline {
-            font-size: 40px;
+            font-size: 24px;
             line-height: 1.5;
             font-weight: 300;
         }
@@ -34,6 +34,30 @@
 
 
         background-size: cover;
+        min-height: 477px;
+    }
+}
+
+@media (min-width: 768px) {
+    .Banner {
+        min-height: 740px;
+        margin-top: -135px;
+        .Content {
+            top: 270px;
+            padding: initial;
+            padding-left: 135px;
+            .Headline {
+                font-size: 40px;
+            }
+        }
+
+
+    &:before {
+        min-height: 740px;
+    }
+    }
+
+    &:before {
         min-height: 740px;
     }
 }

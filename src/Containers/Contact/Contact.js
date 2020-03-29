@@ -17,12 +17,6 @@ const useStyles = makeStyles({
   }
 });
 
-const textStyles = makeStyles({
-  root: {
-    maxWidth: "48%"
-  }
-});
-
 const iconStyles = makeStyles({
   root: {
     color: "#fff",
@@ -32,7 +26,6 @@ const iconStyles = makeStyles({
 
 function Contact() {
   const classes = useStyles();
-  const textClasses = textStyles();
   const iconClasses = iconStyles();
 
   const [formData, setFormData] = useState({
@@ -102,13 +95,12 @@ function Contact() {
                 </div>
                 <div className={styles.EmailPhone}>
                   <TextField
-                    classes={{ root: textClasses.root }}
+                    classes={{ root: styles.Email }}
                     placeholder="Email"
                     variant="outlined"
                     onChange={e => handleChange(e, "email")}
                   />
                   <TextField
-                    classes={{ root: textClasses.root }}
                     placeholder="Phone"
                     variant="outlined"
                     onChange={e => handleChange(e, "phone")}

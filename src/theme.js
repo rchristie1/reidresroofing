@@ -18,7 +18,7 @@ const theme = createMuiTheme({
       },
       label: {
         fontSize: '14px',
-        fontWeight: 600,
+        fontWeight: 500,
         color: '#fff',
         textTransform: 'capitalize'
       }
@@ -34,6 +34,17 @@ const theme = createMuiTheme({
       },
       icon: {
         color: '#fff'
+      }
+    },
+    MuiAppBar: {
+      colorPrimary: {
+        backgroundColor: 'transparent',
+        boxShadow: 'none'
+      },
+    },
+    MuiToolbar: {
+      root: {
+        justifyContent: 'flex-end'
       }
     },
     MuiInputBase: {
@@ -56,6 +67,11 @@ const theme = createMuiTheme({
       notchedOutline: {
         borderColor: '#fff !important'
       }
+    },
+  },
+  palette: {
+    secondary: {
+      main: '#000'
     }
   },
   props: {
